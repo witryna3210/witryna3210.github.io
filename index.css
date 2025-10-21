@@ -19,7 +19,10 @@ html {
 }
 
 body {
-  background-color: var(--background-primary);
+  background-attachment: fixed;
+  background-image: linear-gradient(hsla(0, 0%, 0%, .5) 0 0), url("./assets/bg.jpg");
+  background-size: contain;
+  backdrop-filter: blur(.25rem);
   color: var(--text-primary);
   font: 1rem "Arial", sans-serif;
   line-height: 1.5;
@@ -29,7 +32,10 @@ header {
   align-items: center;
   background-color: var(--background-secondary);
   display: flex;
+  inset-inline: 0;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
 }
 
 nav {
@@ -82,6 +88,7 @@ main {
 
 section {
   background-color: var(--background-secondary);
+  border-radius: .25rem;
   margin-block-start: 2rem;
   padding: 2rem 8rem;
 }
