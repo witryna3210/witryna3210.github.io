@@ -95,7 +95,7 @@ nav a {
   transition-timing-function: ease;
 }
 
-nav a:is([href="."], :hover, :focus-visible) {
+nav a:is(.active, :hover, :focus-visible) {
   --prop-color-highlight-start: var(--color-highlight-start);
   --prop-color-highlight-stop: var(--color-highlight-stop);
   border-image: linear-gradient(to right, var(--color-highlight-start), var(--color-highlight-stop)) 1;
