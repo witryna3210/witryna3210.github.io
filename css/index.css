@@ -1,7 +1,7 @@
 @import url("./reset.css");
 
 :root {
-  --color-background-primary: hsla(0, 0%, 4%, .5);
+  --color-background-primary: hsl(0, 0%, 4%);
   --color-highlight-start: hsl(56, 100%, 82%);
   --color-highlight-stop: hsl(43, 74%, 49%);
   --color-text-primary: hsl(0, 0%, 96%);
@@ -33,12 +33,13 @@ body {
 
 header {
   align-items: stretch;
-  background-color: var(--color-background-primary);
+  background-image: linear-gradient(to bottom, var(--color-background-primary), transparent);
   display: flex;
   flex-flow: row nowrap;
   inset-block-start: 0;
   inset-inline: 0;
   justify-content: space-between;
+  position: relative;
 }
 
 #logo {
@@ -81,13 +82,13 @@ nav a {
   align-items: center;
   background-clip: text;
   background-image: linear-gradient(to right, var(--prop-color-highlight-start), var(--prop-color-highlight-stop));
-  border-block-end: .25rem solid transparent;
+  border-block-start: .25rem solid transparent;
   border-image: linear-gradient(transparent 0 0) 1;
   color: transparent;
   display: flex;
   font-weight: bold;
   letter-spacing: .125rem;
-  padding: 2rem 1.5rem 1.75rem 1.5rem;
+  padding: 1.75rem 1.5rem 2rem 1.5rem;
   position: relative;
   text-transform: uppercase;
   transition-duration: 150ms;
@@ -139,7 +140,7 @@ main {
 }
 
 footer {
-  background-color: var(--color-background-primary);
+  background-image: linear-gradient(to top, var(--color-background-primary), transparent);
   padding: 2rem;
   text-align: center;
 }
