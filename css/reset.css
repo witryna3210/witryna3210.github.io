@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 img, picture, svg, video {
@@ -31,3 +31,4 @@ h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
+
