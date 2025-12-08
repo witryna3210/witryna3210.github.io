@@ -8,15 +8,15 @@
 }
 
 @property --prop-color-highlight-start {
-  syntax: "<color>";
   inherits: false;
   initial-value: hsl(56, 100%, 82%);
+  syntax: "<color>";
 }
 
 @property --prop-color-highlight-stop {
-  syntax: "<color>";
   inherits: false;
   initial-value: hsl(43, 74%, 49%);
+  syntax: "<color>";
 }
 
 body {
@@ -108,6 +108,10 @@ main {
   padding: 2rem;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
 #hero {
   align-items: center;
   display: flex;
@@ -139,6 +143,21 @@ main {
   background-position: right center;
 }
 
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.card {
+  align-items: center;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
 footer {
   background-image: linear-gradient(to top, var(--color-background-primary), transparent);
   padding: 2rem;
@@ -157,5 +176,9 @@ a {
 @media screen and (max-width: 1024px) {
   nav {
     display: none;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
