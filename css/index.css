@@ -39,7 +39,7 @@ header {
   inset-block-start: 0;
   inset-inline: 0;
   justify-content: space-between;
-  position: relative;
+  position: sticky;
 }
 
 #logo {
@@ -196,7 +196,7 @@ main#offer {
     linear-gradient(var(--color-background-primary) 0 0),
     linear-gradient(to bottom, var(--prop-color-highlight-start), var(--prop-color-highlight-stop));
   background-origin: border-box;
-  border: 1px solid transparent;
+  border: .0625rem solid transparent;
   border-radius: .5rem;
   cursor: pointer;
   display: flex;
@@ -213,6 +213,39 @@ main#offer {
   --prop-color-highlight-start: var(--color-highlight-start);
   --prop-color-highlight-stop: var(--color-highlight-stop);
   scale: 1.05;
+}
+
+#blog h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.table-wrapper {
+  border: .0625rem solid hsla(0, 0%, 100%, .25);
+  border-radius: .5rem;
+  margin-block-start: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table :is(td, th) {
+  padding: .5rem;
+}
+
+table thead {
+  border-block-end: .0625rem solid hsla(0, 0%, 100%, .125);
+}
+
+table th {
+  font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: hsla(0, 0%, 100%, .125);
 }
 
 footer {
