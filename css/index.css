@@ -1,48 +1,50 @@
+@import url("./font.css");
 @import url("./reset.css");
 
 :root {
-  --color-background-primary: hsl(0, 0%, 4%);
-  --color-highlight-start: hsl(56, 100%, 82%);
-  --color-highlight-stop: hsl(43, 74%, 49%);
-  --color-text-primary: hsl(0, 0%, 96%);
+  --color-background-primary: hsl(0 0% 4%);
+  --color-highlight-start: hsl(56 100% 82%);
+  --color-highlight-stop: hsl(43 74% 49%);
+  --color-text-primary: hsl(0 0% 96%);
+  --color-text-secondary: hsl(from var(--color-text-primary) h s l / .5);
 }
 
 @property --prop-color-highlight-start {
-  syntax: "<color>";
   inherits: false;
-  initial-value: hsl(56, 100%, 82%);
+  initial-value: hsl(56 100% 82%);
+  syntax: "<color>";
 }
 
 @property --prop-color-highlight-stop {
-  syntax: "<color>";
   inherits: false;
-  initial-value: hsl(43, 74%, 49%);
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-block-start: 6rem;
-  scroll-snap-type: y mandatory;
+  initial-value: hsl(43 74% 49%);
+  syntax: "<color>";
 }
 
 body {
   backdrop-filter: blur(.25rem);
   background-attachment: fixed;
-  background-image: linear-gradient(hsla(0, 0%, 0%, .75) 0 0), url("../assets/bg.jpg");
-  background-size: contain;
+  background-image:
+    linear-gradient(hsl(from var(--color-background-primary) h s l / .75) 0 0),
+    url("../assets/background.jpg");
+  background-position: center;
+  background-size: cover;
   color: var(--color-text-primary);
-  font: 1rem "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  font: 1rem "Inter", sans-serif, system-ui;
   line-height: 1.5;
 }
 
 header {
-  align-items: center;
-  background-color: var(--color-background-primary);
+  align-items: stretch;
+  background-image: linear-gradient(to bottom, var(--color-background-primary), transparent);
   display: flex;
   flex-flow: row nowrap;
+  inset-block-start: 0;
   inset-inline: 0;
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
 }
 
 #logo {
@@ -51,10 +53,6 @@ header {
   flex-flow: row nowrap;
   gap: 1rem;
   padding: 1rem 2rem;
-}
-
-#logo:is(:hover, :focus-visible) h1 {
-  letter-spacing: .5rem;
 }
 
 #logo img {
@@ -69,15 +67,13 @@ header {
   color: transparent;
   font-size: 2rem;
   font-weight: bold;
-  letter-spacing: .125rem;
   text-transform: uppercase;
-  transition: letter-spacing 150ms ease;
 }
 
 nav {
   display: flex;
   flex-flow: row nowrap;
-  height: stretch;
+  gap: 1rem;
 }
 
 nav a {
@@ -86,36 +82,396 @@ nav a {
   align-items: center;
   background-clip: text;
   background-image: linear-gradient(to right, var(--prop-color-highlight-start), var(--prop-color-highlight-stop));
-  border-block-end: .25rem solid transparent;
+  border-block-start: .25rem solid transparent;
   border-image: linear-gradient(transparent 0 0) 1;
   color: transparent;
   display: flex;
   font-weight: bold;
-  letter-spacing: .125rem;
-  padding: 2rem 2rem 1.75rem 2rem;
+  gap: .5rem;
+  padding: 1.75rem 1rem 2rem 1rem;
+  position: relative;
   text-transform: uppercase;
   transition-duration: 150ms;
-  transition-property: --prop-color-highlight-start, --prop-color-highlight-stop, border-image, letter-spacing;
+  transition-property: --prop-color-highlight-start, --prop-color-highlight-stop, border-image;
   transition-timing-function: ease;
 }
 
-nav a:is(:hover, :focus-visible) {
+nav a:is(.nav-item-active, :focus-visible, :hover) {
   --prop-color-highlight-start: var(--color-highlight-start);
   --prop-color-highlight-stop: var(--color-highlight-stop);
   border-image: linear-gradient(to right, var(--color-highlight-start), var(--color-highlight-stop)) 1;
-  letter-spacing: .25rem;
 }
 
-section {
-  min-height: 100vh;
-  scroll-snap-align: start;
+#menu {
+  display: none;
+}
+
+main {
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+#hero {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  opacity: 0;
+  text-align: center;
+}
+
+#hero h2 {
+  background-clip: text;
+  background-image: linear-gradient(to right, var(--color-highlight-start), var(--color-highlight-stop));
+  color: transparent;
+  font-size: clamp(2rem, 1rem + 5vw, 4rem); /* 2rem to 4rem (320px to 960px) */
+  font-weight: bold;
+}
+
+#hero p {
+  font-size: clamp(1rem, 0.5rem + 2.5vw, 2rem); /* 1rem to 2rem (320px to 960px) */
+  font-weight: bold;
+}
+
+#hero a {
+  background-image: linear-gradient(to right, var(--color-highlight-start) 0%, var(--color-highlight-stop) 50%, var(--color-highlight-start) 100%);
+  background-size: 200% auto;
+  border-radius: .25rem;
+  color: var(--color-background-primary);
+  display: block;
+  font-weight: bold;
+  margin-block-start: 1rem;
+  padding: .5rem 2rem;
+  text-transform: uppercase;
+  transition: background-position 150ms ease;
+}
+
+#hero a:is(:hover, :focus-visible) {
+  background-position: right center;
+}
+
+main:not(#hero) {
+  background-color: hsl(0 0% 0% / .5);
+  border-radius: .5rem;
+  margin-inline: auto;
+  text-align: justify;
+  width: min(60rem, 100% - 2rem);
+}
+
+main:not(#hero) h2 {
+  background-clip: text;
+  background-image: linear-gradient(to right, var(--color-highlight-start), var(--color-highlight-stop));
+  color: transparent;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+#about section {
+  margin-block-start: 1.5rem;
+}
+
+#about h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#about a {
+  background-clip: text;
+  background-image: linear-gradient(to right, var(--color-highlight-start), var(--color-highlight-stop));
+  color: transparent;
+}
+
+#about a:hover {
+  font-weight: bold;
+}
+
+#about ul {
+  list-style-position: inside;
+}
+
+#about img {
+  border-radius: .25rem;
+}
+
+#offer section + section {
+  margin-block-start: 1.5rem;
+}
+
+#offer h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#offer a {
+  background-clip: text;
+  background-image: linear-gradient(to right, var(--color-highlight-start), var(--color-highlight-stop));
+  color: transparent;
+}
+
+#offer a:is(:focus-visible, :hover) {
+  font-weight: bold;
+}
+
+#offer :is(p, ul) + p {
+  margin-block-start: 1rem;
+}
+
+#offer strong {
+  font-weight: bold;
+}
+
+#offer ul {
+  list-style-position: inside;
+}
+
+#blog h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#blog :is(p, ul) + p {
+  margin-block-start: 1rem;
+}
+
+.table-wrapper {
+  border: .0625rem solid hsl(0 0% 100% / .125);
+  border-radius: .5rem;
+  margin-block-start: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table :is(td, th) {
+  padding: .5rem;
+}
+
+table thead {
+  border-block-end: .0625rem solid hsl(0 0% 100% / .125);
+}
+
+table th {
+  font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: hsl(0 0% 100% / .05);
+}
+
+#faq section + section {
+  margin-block-start: 1.5rem;
+}
+
+#faq h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#faq a {
+  background-clip: text;
+  background-image: linear-gradient(to right, var(--color-highlight-start), var(--color-highlight-stop));
+  color: transparent;
+}
+
+#faq a:is(:focus-visible, :hover) {
+  font-weight: bold;
+}
+
+#contact a:not(#send) {
+  background-clip: text;
+  background-image: linear-gradient(to right, var(--color-highlight-start), var(--color-highlight-stop));
+  color: transparent;
+}
+
+#contact a:not(#send):is(:focus-visible, :hover) {
+  font-weight: bold;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: .125rem;
+}
+
+label {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+input,
+textarea,
+#send {
+  border: .0625rem solid transparent;
+  border-radius: .25rem;
+  outline: 0;
+  padding: .5rem;
+}
+
+input[type="text"],
+textarea {
+  --prop-color-highlight-start: hsl(0 0% 100% / .125);
+  --prop-color-highlight-stop: hsl(0 0% 100% / .125);
+  background-clip: padding-box, border-box;
+  background-image:
+    linear-gradient(hsl(from var(--color-background-primary) h s l / .95) 0 0),
+    linear-gradient(to right, var(--prop-color-highlight-start), var(--prop-color-highlight-stop));
+  background-origin: border-box;
+  transition-duration: 150ms;
+  transition-property: --prop-color-highlight-start, --prop-color-highlight-stop;
+  transition-timing-function: ease;
+}
+
+:is(input[type="text"], textarea):is(:focus-visible, :hover) {
+  --prop-color-highlight-start: var(--color-highlight-start);
+  --prop-color-highlight-stop: var(--color-highlight-stop);
+}
+
+textarea {
+  resize: vertical;
+}
+
+#send {
+  background-image: linear-gradient(to right, var(--color-highlight-start) 0%, var(--color-highlight-stop) 50%, var(--color-highlight-start) 100%);
+  background-size: 200% auto;
+  border-radius: .25rem;
+  color: var(--color-background-primary);
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-position 150ms ease;
+}
+
+#send:is(:hover, :focus-visible) {
+  background-position: right center;
+}
+
+#contact-details {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-block-start: 1rem;
+}
+
+#contact-details > section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+iframe {
+  aspect-ratio: 1 / 1;
+  border: 0;
+  border-radius: .25rem;
+  width: 100%;
+}
+
+h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+footer {
+  background-image: linear-gradient(to top, var(--color-background-primary), transparent);
+  padding: 2rem;
+  text-align: center;
+}
+
+footer > p:last-of-type {
+  color: var(--color-text-secondary);
 }
 
 a {
   text-decoration: none;
 }
 
-/* Do zmiany */
-:focus-visible {
-  outline: 0;
+:not(input, textarea):focus-visible {
+  outline: .125rem solid var(--color-text-primary);
+  outline-offset: .25rem;
+}
+
+@keyframes slide-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #hero {
+    animation: 500ms ease-in-out slide-in forwards;
+    transform: translateY(5%);
+  }
+
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-block-start: 6rem;
+  }
+}
+
+@media screen and (width <= 64rem) {
+  header {
+    z-index: 1;
+  }
+
+  nav {
+    flex-flow: column nowrap;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    position: absolute;
+  }
+  
+  nav.shown {
+    background-image: linear-gradient(to left, var(--color-background-primary), transparent);
+  }
+
+  nav a {
+    border-block-start: 0;
+    background-image: linear-gradient(to bottom, var(--prop-color-highlight-start), var(--prop-color-highlight-stop));
+    border-inline-end: .25rem solid transparent;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding: 2rem 0.75rem 2rem 1rem;
+  }
+
+  nav a:is(.nav-item-active, :focus-visible, :hover) {
+    border-image: linear-gradient(to bottom, var(--color-highlight-start), var(--color-highlight-stop)) 1;
+  }
+
+  nav a:not(#menu) {
+    display: none;
+  }
+
+  nav.shown a:not(#menu) {
+    display: flex;
+  }
+
+  #menu {
+    display: flex;
+  }
+
+  #contact-details {
+    grid-template-columns: 1fr;
+  }
 }
