@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biuro Rachunkowe CERTUS Estera Pawluch</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a href="#" id="logo">
+        <img src="./assets/logo.png" alt="Biuro Rachunkowe CERTUS Estera Pawluch" id="logo-icon">
+        <h1 id="logo-text">CERTUS</h1>
+      </a>
+      <nav>
+        <a href="#" class="nav-item">Start</a>
+        <a href="#about" class="nav-item">O nas</a>
+        <a href="#services" class="nav-item">Oferta</a>
+        <a href="#news" class="nav-item">Aktualności</a>
+        <a href="#faq" class="nav-item">FAQ</a>
+        <a href="#contact" class="nav-item">Kontakt</a>
+      </nav>
+      <button class="menu-trigger" popovertarget="nav-mobile" aria-label="Otwórz menu">
+        <span class="menu-trigger-icon">
+          <span class="menu-trigger-bar"></span>
+          <span class="menu-trigger-bar"></span>
+          <span class="menu-trigger-bar"></span>
+        </span>
+      </button>
+    </header>
+    <div popover id="nav-mobile" role="dialog" aria-label="Menu">
+      <button class="nav-mobile-close" popovertarget="nav-mobile" popovertargetaction="hide" aria-label="Zamknij menu">&#10005;</button>
+      <h2 class="nav-mobile-title">Menu</h2>
+      <nav class="nav-mobile-list">
+        <a href="#" class="nav-item">Start</a>
+        <a href="#about" class="nav-item">O nas</a>
+        <a href="#services" class="nav-item">Oferta</a>
+        <a href="#news" class="nav-item">Aktualności</a>
+        <a href="#faq" class="nav-item">FAQ</a>
+        <a href="#contact" class="nav-item">Kontakt</a>
+      </nav>
+    </div>
+    <main>
+      <section id="hero">
+        <p id="hero-eyebrow">Biuro Rachunkowe CERTUS</p>
+        <h2 id="hero-title">Miejsce dla<br>Twojego <em>biznesu.</em></h2>
+      </section>
+      <section id="about">
+        <p id="about-quote">&bdquo;Nasze biuro to <em>pewność i spokój</em> dla Ciebie i dla Twojej firmy. Każdy klient jest dla nas partnerem, nie kolejnym numerem teczki.&rdquo;</p>
+        <img src="./assets/eu-funds-poster.png" alt="Fundusze Europejskie - program regionalny dofinansowany przez Unię Europejską" id="about-poster">
+        <div id="about-body" class="section-body">
+          <h2 id="about-title" class="section-title">O nas</h2>
+          <p class="section-paragraph">Od kilku lat zajmujemy się profesjonalną obsługą księgową, kadrową oraz podatkową. W ramach współpracy z naszą firmą doradzamy w sporządzaniu deklaracji VAT, PIT, jak również w sprawozdaniach GUS. Pomagamy także ze sprawami dotyczącymi dofinansowań z PFRON i OHP.</p>
+          <p class="section-paragraph">Tworzymy zgrany, prężnie działający, doświadczony i wykwalifikowany zespół. Zapewniamy obsługę dla klientów dowolnego rodzaju&mdash;dla dużych, średnich i małych firm, jak również dla osób prywatnych. W zakresie naszych świadczeń znajdują się także konsultacje dla osób przygotowujących się do stworzenia własnego biznesu. Doradzamy w wyborze formy opodatkowania oraz prowadzimy dalsze konsultacje podatkowe. Pomimo że nasze biuro znajduje się w Częstochowie, pomagamy wielu przedsiębiorcom z różnych branż na terenie całej Polski. Pod naszą pieczą rozwinęło się wiele początkujących biznesów.</p>
+          <p class="section-paragraph">W celu konsultacji zapraszamy Państwa do naszego nowoczesnego biura znajdującego się w budynku Panorama Business Park, gdzie z łatwością znajdziesz wolne miejsce parkingowe oraz przyjazną kadrę, która chętnie Cię obsłuży i odpowie na wszystkie pytania związane z Twoim biznesem lub sprawą. Lokalizacja biura jest przyjazna dla osób z niepełnosprawnościami; do biura z zewnątrz prowadzi łagodny podjazd, natomiast wewnątrz budynku można skorzystać z ogólnodostępnej windy.</p>
+          <p class="section-paragraph">W razie potrzeby są Państwo w stanie skontaktować się z nami poprzez e-mail lub telefon. Wszystkie dane kontaktowe zawarte są na dole strony oraz w sekcji <a href="#contact">Kontakt</a>. We wspomnianej sekcji znajdują się również godziny pracy oraz mapa ułatwiająca dojazd.</p>
+        </div>
+      </section>
+      <section id="services">
+        <h2 class="section-title">Oferta</h2>
+        <div id="services-body" class="section-body">
+          <article class="service-card">
+            <button class="service-card-trigger" popovertarget="service-popover-1"></button>
+            <h3 class="service-title">Prowadzenie ksiąg i ewidencji</h3>
+            <p class="service-description">Prowadzimy pełną księgowość oraz podatkową księgę przychodów i rozchodów, dbając o terminowe i poprawne księgowanie każdej operacji gospodarczej.</p>
+          </article>
+          <article class="service-card">
+            <button class="service-card-trigger" popovertarget="service-popover-2"></button>
+            <h3 class="service-title">Prowadzenie rozliczeń z ZUS i US</h3>
+            <p class="service-description">Przygotowujemy i składamy deklaracje ZUS oraz podatkowe do urzędu skarbowego, pilnując terminów i reprezentując Twoją firmę w kontaktach z urzędami.</p>
+          </article>
+          <article class="service-card">
+            <button class="service-card-trigger" popovertarget="service-popover-3"></button>
+            <h3 class="service-title">Obsługa kadrowo-płacowa</h3>
+            <p class="service-description">Zajmujemy się umowami, listami płac i rozliczeniami PPK, a także bieżącą obsługą spraw pracowniczych Twojego zespołu.</p>
+          </article>
+          <article class="service-card">
+            <button class="service-card-trigger" popovertarget="service-popover-4"></button>
+            <h3 class="service-title">Prowadzenie akt osobowych</h3>
+            <p class="service-description">Zakładamy i prowadzimy akta osobowe pracowników zgodnie z przepisami, pilnując terminów badań, szkoleń i okresów przechowywania dokumentacji.</p>
+          </article>
+          <article class="service-card">
+            <button class="service-card-trigger" popovertarget="service-popover-5"></button>
+            <h3 class="service-title">Zakładanie działalności gospodarczej i pomoc przy wyborze formy opodatkowania</h3>
+            <p class="service-description">Pomagamy zarejestrować działalność gospodarczą i doradzamy w wyborze formy opodatkowania najlepiej dopasowanej do Twojego biznesu.</p>
+          </article>
+          <article class="service-card">
+            <button class="service-card-trigger" popovertarget="service-popover-6"></button>
+            <h3 class="service-title">Rozliczenia podatkowe</h3>
+            <p class="service-description">Sporządzamy deklaracje PIT, CIT i VAT oraz inne rozliczenia podatkowe, dbając o zgodność z aktualnymi przepisami.</p>
+          </article>
+          <article class="service-card">
+            <button class="service-card-trigger" popovertarget="service-popover-7"></button>
+            <h3 class="service-title">Sporządzanie wniosków &mdash; dotacje oraz pożyczki czy kredyty unijne</h3>
+            <p class="service-description">Przygotowujemy wnioski o dotacje, pożyczki i kredyty unijne, pomagając w skompletowaniu dokumentacji potrzebnej do ich uzyskania.</p>
+          </article>
+          <article class="service-card">
+            <button class="service-card-trigger" popovertarget="service-popover-8"></button>
+            <h3 class="service-title">Konsultacje podatkowe</h3>
+            <p class="service-description">Doradzamy w bieżących sprawach podatkowych i pomagamy znaleźć rozwiązania dopasowane do sytuacji Twojej firmy.</p>
+          </article>
+          <article class="service-card">
+            <button class="service-card-trigger" popovertarget="service-popover-9"></button>
+            <h3 class="service-title">Dofinansowania PFRON i OHP</h3>
+            <p class="service-description">Pomagamy w uzyskaniu dofinansowań z PFRON i OHP, prowadząc Cię przez cały proces składania wniosków.</p>
+          </article>
+          <article class="service-card">
+            <button class="service-card-trigger" popovertarget="service-popover-10"></button>
+            <h3 class="service-title">Pomoc we wdrożeniu KSeF</h3>
+            <p class="service-description">Wspieramy firmy we wdrożeniu Krajowego Systemu e-Faktur, od konfiguracji po szkolenie zespołu z nowych zasad fakturowania.</p>
+          </article>
+        </div>
+        <div popover id="service-popover-1" class="service-popover" role="dialog" aria-labelledby="service-popover-title-1">
+          <button class="service-popover-close" popovertarget="service-popover-1" popovertargetaction="hide" aria-label="Zamknij">&#10005;</button>
+          <h3 class="service-popover-title" id="service-popover-title-1">Prowadzenie ksiąg i ewidencji</h3>
+          <p class="service-popover-paragraph">Nasze biuro księgowe zapewnia klientom dokładne prowadzenie pełnej księgowości przy pomocy specjalistycznych programów księgowych. Pozwala to na kompleksową ewidencję wszystkich zdarzeń gospodarczych. Zajmujemy się między innymi:</p>
+          <ul class="service-popover-list">
+            <li>prowadzeniem dzienników, ksiąg głównych (kont) oraz ksiąg pomocniczych;</li>
+            <li>zestawieniami obrotów i sald kont;</li>
+            <li>inwentarzem (wykazem aktywów i pasywów);</li>
+            <li>szczegółowym ewidencjonowaniem wszystkich operacji finansowych.</li>
+          </ul>
+          <p class="service-popover-paragraph">Nasze usługi gwarantują szczegółową analizę finansową, jak również uzyskanie precyzyjnych danych potrzebnych do podejmowania skutecznych decyzji biznesowych. Dzięki naszej pracy firmy zyskują wzrost wiarygodności i przejrzystości finansowej.</p>
+          <p class="service-popover-paragraph">Zapewniamy również ewidencję firm obejmującą Centralną Ewidencję i Informację o Działalności Gospodarczej (CEIDG), na którą składa się:</p>
+          <ul class="service-popover-list">
+            <li>ewidencja księgowa: prowadzenie księgi przychodów i rozchodów (KPiR), ewidencji przychodów;</li>
+            <li>ewidencja środków trwałych;</li>
+            <li>ewidencja VAT: rejestry sprzedaży i zakupów VAT dla firm będących płatnikami VAT;</li>
+            <li>obliczanie podstawy podatku dochodowego od osób fizycznych;</li>
+            <li>sporządzania i wysyłki JPK_VAT;</li>
+            <li>ustalanie składek na ubezpieczenie społeczne i zdrowotne;</li>
+            <li>ewidencja czasu pracy dla pracowników zgodnie z przepisami prawa pracy.</li>
+          </ul>
+          <p class="service-popover-paragraph"><strong>Wszystkie ewidencje prowadzone są elektronicznie przy użyciu profesjonalnych programów wiodących dostawców oprogramowań.</strong></p>
+          <p class="service-popover-paragraph">Umożliwiamy firmom zawieszenie, wznowienie lub zamknięcie działalności oraz pomagamy w rozliczaniu podatków i składek.</p>
+        </div>
+        <div popover id="service-popover-2" class="service-popover" role="dialog" aria-labelledby="service-popover-title-2">
+          <button class="service-popover-close" popovertarget="service-popover-2" popovertargetaction="hide" aria-label="Zamknij">&#10005;</button>
+          <h3 class="service-popover-title" id="service-popover-title-2">Prowadzenie rozliczeń z ZUS i US</h3>
+          <p class="service-popover-paragraph">Firma CERTUS z chęcią pomaga swoim klientom w kwestii rozliczeń z ZUS i US. Dzięki nam przedsiębiorcy nie muszą obawiać się niedopilnowania terminów wpłat czy zmian w przepisach podatkowych. Z zaangażowaniem pomagamy w przygotowywaniu deklaracji czy korekt dokumentów. Przypominamy o terminach wpłat podatków, jak również doradzamy, jaka forma opodatkowania jest najoptymalniejsza dla danego przedsiębiorstwa.</p>
+          <p class="service-popover-paragraph">Pomagamy naszym klientom prowadzić rozliczenia z ZUS, między innymi:</p>
+          <ul class="service-popover-list">
+            <li>zgłaszamy firmy i pracowników do ZUS (ZUA, ZZA);</li>
+            <li>przygotowujemy i wysyłamy deklaracje DRA, RCA, RZA;</li>
+            <li>naliczamy składki ZUS (społeczne, zdrowotne, FP);</li>
+            <li>pilnujemy terminów i wysokości wpłat;</li>
+            <li>przygotowujemy korekty dokumentów ZUS;</li>
+            <li>kontaktujemy się z ZUS i odpowiadamy na pisma;</li>
+            <li>rozliczamy wynagrodzenia i umowy (o pracę, zlecenie, dzieło);</li>
+            <li>sporządzamy wnioski &bdquo;wakacje składkowe&rdquo;.</li>
+          </ul>
+          <p class="service-popover-paragraph">Jak również pomagamy w zakresie rozliczeń z US:</p>
+          <ul class="service-popover-list">
+            <li>obliczamy i rozliczamy podatek dochodowy (PIT lub CIT);</li>
+            <li>rozliczamy VAT (rejestr VAT, deklaracje JPK_V7);</li>
+            <li>pilnujemy terminów wpłat podatków;</li>
+            <li>przygotowujemy i wysyłamy do US: JPK_V7 (VAT), PIT-5 / PIT-36 / PIT-36L / PIT-28 (w zależności od formy), CIT-8, informacje roczne (PIT-11, PIT-4R, PIT-8AR);</li>
+            <li>korygujemy deklaracje;</li>
+            <li>prowadzimy KPiR lub księgi rachunkowe;</li>
+            <li>prowadzimy ewidencję VAT sprzedaży i zakupów;</li>
+            <li>prowadzimy ewidencję środków trwałych;</li>
+            <li>reprezentujemy podatnika przed Urzędem Skarbowym (jeśli ma pełnomocnictwo);</li>
+            <li>odpowiadamy na pisma i wezwania;</li>
+            <li>wyjaśniamy niezgodności i bierzemy udział w kontrolach;</li>
+            <li>informujemy o wysokości podatków do zapłaty;</li>
+            <li>doradzamy w zakresie optymalnej formy opodatkowania;</li>
+            <li>sygnalizujemy zmiany w przepisach podatkowych.</li>
+          </ul>
+        </div>
+        <div popover id="service-popover-3" class="service-popover" role="dialog" aria-labelledby="service-popover-title-3">
+          <button class="service-popover-close" popovertarget="service-popover-3" popovertargetaction="hide" aria-label="Zamknij">&#10005;</button>
+          <h3 class="service-popover-title" id="service-popover-title-3">Obsługa kadrowo-płacowa</h3>
+          <p class="service-popover-paragraph">Nasze biuro rachunkowe oferuje kompleksową obsługę kadrowo-płacową, skierowaną do przedsiębiorców zatrudniających pracowników na podstawie umów o pracę oraz umów cywilnoprawnych. Usługa realizowana jest zgodnie z aktualnymi przepisami prawa pracy, ubezpieczeń społecznych oraz przepisami podatkowymi, z zachowaniem pełnej poufności i bezpieczeństwa danych.</p>
+          <p class="service-popover-paragraph">Zakres obsługi kadrowej obejmuje:</p>
+          <ul class="service-popover-list">
+            <li>prowadzenie akt osobowych pracowników;</li>
+            <li>przygotowywanie umów o pracę;</li>
+            <li>umów zlecenia i umów o dzieło, aneksów oraz świadectw pracy;</li>
+            <li>zgłoszenia i wyrejestrowania pracowników w ZUS;</li>
+            <li>prowadzenie ewidencji czasu pracy, urlopów wypoczynkowych oraz zwolnień lekarskich;</li>
+            <li>kontrolę terminów badań lekarskich i szkoleń BHP.</li>
+          </ul>
+          <p class="service-popover-paragraph">W ramach obsługi płacowej realizujemy:</p>
+          <ul class="service-popover-list">
+            <li>naliczanie wynagrodzeń;</li>
+            <li>sporządzanie list płac;</li>
+            <li>obliczanie składek ZUS oraz zaliczek na podatek dochodowy.</li>
+          </ul>
+          <p class="service-popover-paragraph">Przygotowujemy i przekazujemy deklaracje do ZUS i Urzędu Skarbowego, a także dokumenty roczne, takie jak PIT-11, PIT-4R i PIT-8AR. Oferujemy wsparcie w kontaktach z ZUS i US oraz pomoc podczas kontroli, zapewniając klientom spokój i terminowe wywiązywanie się z obowiązków pracodawcy.</p>
+        </div>
+        <div popover id="service-popover-4" class="service-popover" role="dialog" aria-labelledby="service-popover-title-4">
+          <button class="service-popover-close" popovertarget="service-popover-4" popovertargetaction="hide" aria-label="Zamknij">&#10005;</button>
+          <h3 class="service-popover-title" id="service-popover-title-4">Prowadzenie akt osobowych</h3>
+          <p class="service-popover-paragraph">W ramach usług świadczonych przez nasze biuro rachunkowe oferujemy kompleksowe i rzetelne prowadzenie akt osobowych pracowników, stanowiące jeden z podstawowych obowiązków każdego pracodawcy. Usługa realizowana jest w pełnej zgodności z obowiązującymi przepisami Kodeksu pracy, aktami wykonawczymi oraz regulacjami dotyczącymi ochrony danych osobowych, w tym RODO. Zapewniamy bezpieczeństwo, poufność oraz prawidłową organizację dokumentacji kadrowej.</p>
+          <p class="service-popover-paragraph">Prowadzimy dokumentację pracowniczą obejmującą między innymi dokumenty związane z procesem zatrudnienia, przebiegiem stosunku pracy, zmianami warunków zatrudnienia, odpowiedzialnością porządkową oraz zakończeniem współpracy. Przygotowujemy i porządkujemy umowy o pracę, aneksy, zakresy obowiązków, oświadczenia pracowników, wnioski urlopowe, dokumenty dotyczące czasu pracy oraz świadectwa pracy.</p>
+          <p class="service-popover-paragraph">Dbamy o terminowe uzupełnianie akt osobowych, ich właściwe przechowywanie oraz archiwizację przez okres wymagany przepisami prawa. Monitorujemy ważność badań lekarskich, szkoleń BHP oraz innych obowiązkowych dokumentów, informując pracodawcę o zbliżających się terminach i konieczności ich odnowienia. Zapewniamy również przygotowanie akt osobowych do kontroli przeprowadzanych przez Państwową Inspekcję Pracy, ZUS lub inne uprawnione instytucje.</p>
+          <p class="service-popover-paragraph">Powierzenie prowadzenia akt osobowych naszemu biuru rachunkowemu pozwala pracodawcom ograniczyć ryzyko błędów formalnych, uniknąć sankcji oraz zaoszczędzić czas, Oferujemy indywidualne podejście, stałe wsparcie merytoryczne oraz bieżące informowanie o zmianach w przepisach prawa pracy.</p>
+        </div>
+        <div popover id="service-popover-5" class="service-popover" role="dialog" aria-labelledby="service-popover-title-5">
+          <button class="service-popover-close" popovertarget="service-popover-5" popovertargetaction="hide" aria-label="Zamknij">&#10005;</button>
+          <h3 class="service-popover-title" id="service-popover-title-5">Zakładanie działalności gospodarczej i pomoc przy wyborze formy opodatkowania</h3>
+          <p class="service-popover-paragraph">Zapewniamy kompleksowe wsparcie w zakresie zakładania działalności gospodarczej, skierowane zarówno do osób rozpoczynających swoją pierwszą firmę, jak i przedsiębiorców planujących zmianę formy prowadzenia biznesu. Zapewniamy rzetelną pomoc na każdym etapie procesu rejestracji, minimalizując formalności i ryzyko błędów już na starcie działalności.</p>
+          <p class="service-popover-paragraph">Pomagamy w prawidłowym wypełnieniu i złożeniu wniosku CEIDG, zgłoszeń do Urzędu Skarbowego oraz Zakładu Ubezpieczeń Społecznych. Doradzamy w zakresie wyboru kodów PKD, formy prowadzenia księgowości oraz obowiązków rejestracyjnych związanych z podatkiem VAT. Informujemy również o dostępnych ulgach i preferencjach, takich jak ulga na start czy preferencyjne składki ZUS.</p>
+          <p class="service-popover-paragraph">Szczególną wagę przykładamy do pomocy przy wyborze optymalnej formy opodatkowania, dostosowanej do charakteru planowanej działalności, prognozowanych przychodów oraz sytuacji osobistej przedsiębiorcy.</p>
+          <p class="service-popover-paragraph">Przedstawiamy różnice pomiędzy opodatkowaniem na zasadach ogólnych, podatkiem liniowym oraz ryczałtem od przychodów ewidencjonowanych, wskazując zalety i ograniczenia każdego rozwiązania. Dzięki temu klienci mogą podjąć świadomą decyzję, która pozwoli im efektywnie zarządzać obciążeniami podatkowymi.</p>
+          <p class="service-popover-paragraph">Współpraca z naszym biurem na etapie zakładania działalności daje solidne podstawy do dalszego, bezpiecznego prowadzenia firmy. Oferujemy również dalszą obsługę księgową i podatkową, zapewniając ciągłość wsparcia, bieżące doradztwo oraz informowanie o zmianach w przepisach, które mogą mieć wpływ na rozwój przedsiębiorstwa.</p>
+        </div>
+        <div popover id="service-popover-6" class="service-popover" role="dialog" aria-labelledby="service-popover-title-6">
+          <button class="service-popover-close" popovertarget="service-popover-6" popovertargetaction="hide" aria-label="Zamknij">&#10005;</button>
+          <h3 class="service-popover-title" id="service-popover-title-6">Rozliczenia podatkowe</h3>
+          <p class="service-popover-paragraph">Dostarczamy kompleksową obsługę w zakresie rozliczeń podatkowych, zapewniając bezpieczeństwo, terminowość i pełną zgodność z obowiązującymi przepisami prawa. Zajmujemy się zarówno rozliczeniami osób fizycznych, jak i przedsiębiorców prowadzących działalność gospodarczą, niezależnie od jej skali czy formy opodatkowania.</p>
+          <p class="service-popover-paragraph">W ramach naszych usług przygotowujemy roczne deklaracje podatkowe PIT, CIT oraz VAT, korekty zeznań oraz inne dokumenty wymagane przez urzędy skarbowe. Pomagamy w rozliczeniach dochodów z różnych źródeł, w tym z pracy, działalności gospodarczej, najmu, praw autorskich czy dochodów zagranicznych. Dbamy o to, aby wszystkie ulgi, odliczenia i możliwości optymalizacji podatkowej były maksymalnie wykorzystane, zgodnie z obowiązującymi przepisami.</p>
+          <p class="service-popover-paragraph">Nasze podejście jest indywidualne&mdash;każdemu klientowi poświęcamy czas na szczegółową analizę sytuacji podatkowej i doradzamy rozwiązania dopasowane do jego potrzeb. Dzięki bieżącemu monitorowaniu zmian w prawie podatkowym możemy szybko reagować na nowe regulacje, minimalizując ryzyko błędów i niepotrzebnych komplikacji.</p>
+          <p class="service-popover-paragraph">Rozliczenia podatkowe realizujemy zarówno w formie tradycyjnej, jak i zdalnie, co pozwala klientom zaoszczędzić czas i wygodnie przekazać dokumenty. Zapewniamy pełną poufność danych oraz przejrzyste procedury, dzięki czemu proces rozliczeń jest prosty, szybki i bezstresowy.</p>
+          <p class="service-popover-paragraph">Powierzając nam swoje sprawy podatkowe, zyskujesz pewność, że wszystkie rozliczenia zostały wykonane profesjonalnie, zgodnie z przepisami i w terminie. Naszym priorytetem jest nie tylko poprawne rozliczenie, ale także edukacja klienta&mdash;tłumaczymy wszelkie zawiłości podatkowe w przystępny sposób, aby każdy mógł świadomie zarządzać swoimi finansami.</p>
+        </div>
+        <div popover id="service-popover-7" class="service-popover" role="dialog" aria-labelledby="service-popover-title-7">
+          <button class="service-popover-close" popovertarget="service-popover-7" popovertargetaction="hide" aria-label="Zamknij">&#10005;</button>
+          <h3 class="service-popover-title" id="service-popover-title-7">Sporządzanie wniosków &mdash; dotacje oraz pożyczki czy kredyty unijne</h3>
+          <p class="service-popover-paragraph">Nasze biuro księgowe oferuje kompleksową usługę sporządzania wniosków o dotacje, pożyczki oraz kredyty unijne, skierowaną do przedsiębiorców planujących rozwój swojej działalności, inwestycje lub rozpoczęcie nowego projektu. Wspieramy klientów na każdym etapie procesu pozyskiwania środków finansowych&mdash;od analizy możliwości, przez przygotowanie dokumentacji, aż po złożenie wniosku i kontakt z instytucjami finansującymi.</p>
+          <p class="service-popover-paragraph">Dzięki doświadczeniu oraz bieżącej znajomości programów unijnych i krajowych pomagamy dobrać najkorzystniejsze formy finansowania, dopasowane do profilu działalności, branży oraz indywidualnych potrzeb przedsiębiorcy. Przygotowujemy wnioski o dotacje bezzwrotne, preferencyjne pożyczki oraz kredyty unijne, dbając o ich zgodność z obowiązującymi wymogami formalnymi i merytorycznymi.</p>
+          <p class="service-popover-paragraph">Sporządzamy komplet niezbędnych dokumentów, w tym biznesplany, prognozy finansowe, harmonogramy realizacji projektów oraz wymagane załączniki księgowe i podatkowe. Każdy wniosek opracowujemy rzetelnie i przejrzyście, zwiększając tym samym szanse na uzyskanie dofinansowania. W trakcie realizacji usługi zapewniamy wsparcie merytoryczne, odpowiadamy na pytania instytucji przyznających środki oraz pomagamy w ewentualnych korektach.</p>
+          <p class="service-popover-paragraph">Współpraca z naszym biurem rachunkowym to gwarancja profesjonalizmu, oszczędności czasu oraz minimalizacji ryzyka błędów formalnych. Doskonale rozumiemy, jak skomplikowane i czasochłonne mogą być procedury związane z funduszami unijnymi, dlatego przejmujemy ten obowiązek, pozwalając klientom skupić się na prowadzeniu i rozwoju firmy.</p>
+          <p class="service-popover-paragraph">Zapewniamy indywidualne podejście, poufność oraz pełne zaangażowanie na każdym etapie współpracy, pomagając skutecznie pozyskać środki na realizację planów biznesowych.</p>
+        </div>
+        <div popover id="service-popover-8" class="service-popover" role="dialog" aria-labelledby="service-popover-title-8">
+          <button class="service-popover-close" popovertarget="service-popover-8" popovertargetaction="hide" aria-label="Zamknij">&#10005;</button>
+          <h3 class="service-popover-title" id="service-popover-title-8">Konsultacje podatkowe</h3>
+          <p class="service-popover-paragraph">Oferujemy profesjonalne konsultacje podatkowe, które pomagają przedsiębiorcom i osobom prywatnym podejmować świadome decyzje finansowe oraz skutecznie zarządzać swoimi zobowiązaniami podatkowymi. Nasze biuro księgowe zapewnia rzetelne, aktualne i kompleksowe wsparcie w zakresie prawa podatkowego, dzięki czemu każdy klient może czuć się bezpiecznie i pewnie w swoich decyzjach finansowych.</p>
+          <p class="service-popover-paragraph">W ramach konsultacji analizujemy indywidualną sytuację podatkową klienta, identyfikujemy obowiązki podatkowe oraz wskazujemy możliwości legalnej optymalizacji podatków. Doradzamy w zakresie podatków dochodowych (PIT i CIT), podatku VAT, podatków lokalnych, a także w kwestiach związanych z rozliczeniami międzynarodowymi. Pomagamy w interpretacji przepisów, przygotowaniu dokumentacji oraz w wyborze najkorzystniejszych form rozliczeń dla firm i osób prywatnych.</p>
+          <p class="service-popover-paragraph">Nasze konsultacje pozwalają uniknąć błędów i niepotrzebnych sankcji ze strony urzędów skarbowych, a także wspierają długofalowe planowanie finansowe. Podczas spotkań szczegółowo tłumaczymy zawiłości przepisów podatkowych w sposób przystępny i zrozumiały, odpowiadając na wszystkie pytania i rozwiewając wątpliwości klientów. Oferujemy również praktyczne rekomendacje i strategie, które pozwalają optymalizować koszty i zwiększać bezpieczeństwo podatkowe.</p>
+          <p class="service-popover-paragraph">Konsultacje podatkowe realizujemy w formie stacjonarnej w naszym biurze lub zdalnie, co daje pełną wygodę i oszczędność czasu. Zapewniamy indywidualne podejście do każdej sprawy, pełną poufność oraz profesjonalizm na każdym etapie współpracy.</p>
+          <p class="service-popover-paragraph">Powierzając nam swoje konsultacje podatkowe, Klienci zyskują pewność, że wszystkie decyzje są podejmowane na podstawie aktualnych przepisów i doświadczenia ekspertów, co pozwala minimalizować ryzyko podatkowe i skutecznie planować rozwój swojej działalności.</p>
+        </div>
+        <div popover id="service-popover-9" class="service-popover" role="dialog" aria-labelledby="service-popover-title-9">
+          <button class="service-popover-close" popovertarget="service-popover-9" popovertargetaction="hide" aria-label="Zamknij">&#10005;</button>
+          <h3 class="service-popover-title" id="service-popover-title-9">Dofinansowania PFRON i OHP</h3>
+          <p class="service-popover-paragraph">Nasze biuro zapewnia kompleksową pomoc w zakresie pozyskiwania dofinansowań z PFRON (Państwowego Funduszu Rehabilitacji Osób Niepełnosprawnych) oraz OHP (Ochotniczych Hufców Pracy). Świadczymy profesjonalne wsparcie dla przedsiębiorców, którzy chcą korzystać z dostępnych form wsparcia finansowego przy zatrudnianiu osób niepełnosprawnych lub młodzieży wchodzącej na rynek pracy.</p>
+          <p class="service-popover-paragraph">W ramach naszych usług przygotowujemy komplet dokumentacji niezbędnej do ubiegania się o dofinansowania, sporządzamy wnioski oraz pomagamy w wypełnieniu wszystkich formalności wymaganych przez instytucje finansujące. Doradzamy, jakie formy wsparcia będą najkorzystniejsze dla konkretnej firmy, uwzględniając jej strukturę zatrudnienia, profil działalności oraz specyficzne potrzeby pracowników.</p>
+          <p class="service-popover-paragraph">Dofinansowania z PFRON mogą obejmować między innymi zwrot części wynagrodzeń, finansowanie przystosowania stanowisk pracy dla osób niepełnosprawnych oraz refundacje składek na ubezpieczenia społeczne. W przypadku OHP pomagamy w pozyskiwaniu wsparcia dla zatrudniania młodzieży, szkoleń zawodowych oraz staży, co pozwala rozwijać kompetencje pracowników i wspierać młodych ludzi w rozpoczęciu kariery zawodowej.</p>
+          <p class="service-popover-paragraph">Dostarczamy kompleksową obsługę&mdash;od analizy możliwości pozyskania dofinansowania, przez przygotowanie dokumentów, aż po kontakt z instytucjami PFRON i OHP oraz monitorowanie procesu przyznawania środków. Dzięki naszej pomocy przedsiębiorcy mogą skupić się na prowadzeniu firmy, mając pewność, że wszystkie wnioski są przygotowane profesjonalnie i zgodnie z obowiązującymi przepisami.</p>
+          <p class="service-popover-paragraph">Zapewniamy indywidualne podejście, pełną poufność oraz wsparcie na każdym etapie współpracy, dzięki czemu proces pozyskiwania dofinansowań jest prosty, szybki i bezstresowy. Powierzając nam tę usługę, zyskujesz pewność, że Twoja firma skutecznie korzysta ze wszystkich dostępnych możliwości finansowego wsparcia.</p>
+        </div>
+        <div popover id="service-popover-10" class="service-popover" role="dialog" aria-labelledby="service-popover-title-10">
+          <button class="service-popover-close" popovertarget="service-popover-10" popovertargetaction="hide" aria-label="Zamknij">&#10005;</button>
+          <h3 class="service-popover-title" id="service-popover-title-10">Pomoc we wdrożeniu KSeF</h3>
+          <p class="service-popover-paragraph">Biuro CERTUS oferuje kompleksowe wsparcie w zakresie wdrożenia Krajowego Systemu e-Faktur (KSeF), który od 2026 roku jest obowiązkowym narzędziem do wystawiania i przesyłania faktur w formie elektronicznej dla niemal wszystkich firm. Dzięki naszej pomocy proces adaptacji do nowych przepisów jest szybki, prosty i bezpieczny, a Twoja firma zyskuje pełną zgodność z obowiązującymi regulacjami podatkowymi.</p>
+          <p class="service-popover-paragraph">W ramach usługi analizujemy potrzeby i strukturę działalności Klienta, aby przygotować optymalne rozwiązanie dostosowane do specyfiki firmy. Pomagamy w konfiguracji systemów księgowych oraz w integracji oprogramowania z KSeF, tak aby wystawianie i odbieranie faktur elektronicznych było intuicyjne i bezbłędne. Szkolimy pracowników i udzielamy praktycznych wskazówek dotyczących obsługi systemu, aby korzystanie z KSeF stało się naturalną częścią codziennej pracy.</p>
+          <p class="service-popover-paragraph">Nasze wsparcie obejmuje także przygotowanie firmy do wymagań formalnych i technicznych KSeF, w tym konfigurację podpisów elektronicznych oraz nadanie uprawnień użytkownikom systemu. Doradzamy w zakresie przesyłania faktur, ich archiwizacji oraz kontroli poprawności dokumentów, minimalizując ryzyko błędów i nieprawidłowości w rozliczeniach podatkowych.</p>
+          <p class="service-popover-paragraph">Wdrożenie KSeF z naszym biurem rachunkowym to gwarancja profesjonalizmu, oszczędności czasu i bezpieczeństwa. Zapewniamy pełną poufność danych, indywidualne podejście oraz bieżące wsparcie na każdym etapie procesu wdrożeniowego. Naszym celem jest, aby Twoja firma mogła w pełni wykorzystać możliwości nowego systemu e-faktur, poprawiając efektywność księgowości i spełniając wymogi prawne w sposób bezstresowy i bezproblemowy.</p>
+          <p class="service-popover-paragraph">Powierzając nam wdrożenie KSeF, zyskujesz pewność, że Twoje faktury elektroniczne są zgodne z przepisami, a proces ich obsługi jest szybki, nowoczesny i w pełni zautomatyzowany.</p>
+        </div>
+      </section>
+      <section id="news">
+        <h2 class="section-title">Aktualności</h2>
+        <div id="news-body" class="section-body">
+          <a href="./news/szkolenie-ksef-02-01-2026.html" class="news-card">
+            <p class="news-date">2 stycznia 2026</p>
+            <h3 class="news-title">Szkolenie KSeF</h3>
+            <p class="news-synopsis">Zapoznaj się z najważniejszymi zasadami, obowiązkami i praktycznymi aspektami korzystania z Krajowego Systemu e-Faktur.</p>
+          </a>
+        </div>
+      </section>
+      <section id="faq">
+        <h2 class="section-title">FAQ</h2>
+        <div id="faq-body" class="section-body">
+          <details class="faq-item">
+            <summary class="faq-question">Jakie usługi świadczy Biuro Rachunkowe CERTUS Estera Pawluch?</summary>
+            <p class="faq-answer">W zakres naszych świadczeń wchodzą: prowadzenie ksiąg i ewidencji, prowadzenie rozliczeń z ZUS i US, obsługa kadrowo-płacowa, prowadzenie akt osobowych, zakładanie działalności gospodarczej, pomoc przy wyborze formy opodatkowania, rozliczenia podatkowe, sporządzanie wniosków o dotacje oraz pożyczki czy kredyty unijne, konsultacje podatkowe, dofinansowania PFRON, OHP oraz pomoc w wdrożeniu KSeF. Szczegółowe informacje znajdują się w sekcji <a href="#services">Oferta</a>.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Ile kosztują usługi zapewniane przez biuro?</summary>
+            <p class="faq-answer">Cena świadczeń zależna jest od dziedziny i zakresu świadczeń interesanta.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Jak można umówić się na spotkanie?</summary>
+            <p class="faq-answer">W celu ustalenia terminu spotkania należy wysłać zapytanie poprzez e-mail lub zapytać się podczas rozmowy telefonicznej. Prosimy o wcześniejsze przygotowanie kilku dogodnych terminów, gdyż może dojść do sytuacji, gdzie termin, o który Państwo pytają jest już zajęty.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Kiedy można skontaktować się z biurem?</summary>
+            <p class="faq-answer">Nasze biuro obsługuje klientów we wszystkie dni robocze w godzinach od 7:00 do 15:00. W wypadku zmiany godzin przyjmowania w danym dniu zostanie wcześniej wystawiona informacja na stronie lub na naszych mediach społecznościowych. W soboty, niedziele i święta biuro jest zamknięte. W wypadku wysłania wiadomości po godzinach obsługi klienta zwykle odpowiedź zostaje nadana następnego dnia roboczego.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">W jakiej formie można przekazywać dokumenty do biura?</summary>
+            <p class="faq-answer">W celu przekazania dokumentów do naszego biura mogą Państwo posłużyć się drogą elektroniczną, gdzie przesyłają Państwo skany potrzebnych, odpowiednio podpisanych dokumentów na nasz adres e-mail. Innym sposobem jest wysłanie dokumentów drogą pocztową lub własnoręczne dostarczenie ich do biura.</p>
+          </details>
+        </div>
+      </section>
+      <section id="contact">
+        <h2 class="section-title">Kontakt</h2>
+        <div id="contact-body" class="section-body">
+          <div id="contact-fields">
+            <div class="contact-field">
+              <span class="contact-field-label">Adres</span>
+              <span class="contact-field-value">Ul. Okulickiego 84/23<br>42-218 Częstochowa<br>Panorama Business Park</span>
+            </div>
+            <div class="contact-field">
+              <span class="contact-field-label">E-mail</span>
+              <span class="contact-field-value">biurobus&commat;wp.pl</span>
+            </div>
+            <div class="contact-field">
+              <span class="contact-field-label">Telefon</span>
+              <span class="contact-field-value">+48 605 202 970</span>
+            </div>
+            <div class="contact-field">
+              <span class="contact-field-label">Godziny pracy</span>
+              <table id="contact-hours">
+                <thead>
+                  <tr>
+                    <th>Poniedziałek&ndash;piątek</th>
+                    <th>Sobota&ndash;niedziela</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>07:00&ndash;15:00</td>
+                    <td>Zamknięte</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <a href="mailto:biurobus@wp.pl" class="contact-cta">Napisz do nas</a>
+          </div>
+          <div id="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.3334587627924!2d19.091636676846782!3d50.82498706032555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710b59a4c7e2e9b%3A0x3aea390c0c18862c!2sBiuro%20Rachunkowe%20CERTUS%20Estera%20Pawluch!5e0!3m2!1spl!2spl!4v1761565289958!5m2!1spl!2spl" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Lokalizacja biura CERTUS na mapie"></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a href="#" id="footer-logo">CERTUS</a>
+      <p id="footer-copy">Biuro Rachunkowe CERTUS Estera Pawluch &copy; 2026. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+  </body>
+</html>
