@@ -617,6 +617,7 @@ strong {
 
 .faq-question::after {
   --size: 1rem;
+  aspect-ratio: 1;
   block-size: var(--size);
   border: none;
   border-block-end: .0625rem solid currentColor;
@@ -907,7 +908,12 @@ strong {
   footer {
     flex-direction: column;
     gap: var(--gap-md);
+    padding: var(--gap-md) var(--gap-lg);
     text-align: center;
+  }
+
+  header {
+    padding: var(--gap-md) var(--gap-lg);
   }
 
   header > nav {
