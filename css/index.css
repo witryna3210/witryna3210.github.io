@@ -587,6 +587,7 @@ strong {
   color: var(--color-text-dim);
   padding: var(--gap-md) var(--gap-lg);
   position: relative;
+  text-align: justify;
 }
 
 .faq-item:open .faq-answer {
