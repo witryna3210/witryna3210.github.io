@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://certus.czest.pl/sitemap.xml
