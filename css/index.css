@@ -952,6 +952,10 @@ strong {
     min-block-size: 20rem;
   }
 
+  #hero {
+    padding: var(--gap-lg);
+  }
+
   #news-body {
     grid-template-columns: 1fr;
   }
